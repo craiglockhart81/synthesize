@@ -1,8 +1,8 @@
 <?php
 
-namespace Frozensheep\Synthesize\Tests\Type;
+namespace Craiglockhart81\Synthesize\Tests\Type;
 
-use Frozensheep\Synthesize\Tests\Type\Fixtures\IdFixture;
+use Craiglockhart81\Synthesize\Tests\Type\Fixtures\IdFixture;
 
 class IdTest extends \PHPUnit_Framework_TestCase {
 

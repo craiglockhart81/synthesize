@@ -2,20 +2,20 @@
 /**
 *	This file contains the Unknown Type Exception Class.
 *
-*	@package	Frozensheep\Synthesize
-*	@author		Jacob Wyke <jacob@frozensheep.com>
+*	@package	Craiglockhart81\Synthesize
+*	@author		Craig Lockhart <craiglockhart81@gmail.com>
 *	@license	MIT
 *
 */
 
-namespace Frozensheep\Synthesize\Exception;
+namespace Craiglockhart81\Synthesize\Exception;
 
 /**
 *	Type Exception Class
 *
 *	Exception for providing the wrong data type to a property.
 *
-*	@package	Frozensheep\Synthesize
+*	@package	Craiglockhart81\Synthesize
 *
 */
 class TypeException extends \RuntimeException {

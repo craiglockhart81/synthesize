@@ -2,26 +2,26 @@
 /**
 *	File containing the Object Array Object class.
 *
-*	@package	Frozensheep\Synthesize
-*	@author		Jacob Wyke <jacob@frozensheep.com>
+*	@package	Craiglockhart81\Synthesize
+*	@author		Craig Lockhart <craiglockhart81@gmail.com>
 *	@license	MIT
 *
 */
 
-namespace Frozensheep\Synthesize\Type;
+namespace Craiglockhart81\Synthesize\Type;
 
-use Frozensheep\Synthesize\Type\ArrayObject;
-use Frozensheep\Synthesize\Exception\MaxException;
-use Frozensheep\Synthesize\Exception\ClassException;
-use Frozensheep\Synthesize\Exception\TypeException;
-use Frozensheep\Synthesize\Exception\MissingOptionException;
+use Craiglockhart81\Synthesize\Type\ArrayObject;
+use Craiglockhart81\Synthesize\Exception\MaxException;
+use Craiglockhart81\Synthesize\Exception\ClassException;
+use Craiglockhart81\Synthesize\Exception\TypeException;
+use Craiglockhart81\Synthesize\Exception\MissingOptionException;
 
 /**
 *	Object Array Object Class
 *
 *	An Object Array data type class. Only allows items of the allowed class.
 *
-*	@package	Frozensheep\Synthesize
+*	@package	Craiglockhart81\Synthesize
 *
 */
 class ObjectArrayObject extends ArrayObject {

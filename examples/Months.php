@@ -4,7 +4,7 @@
 *
 *	@package		RightmoveADF
 *	@version		@@RELEASE_VERSION@@
-*	@author			Jacob Wyke <jacob@frozensheep.com>
+*	@author			Craig Lockhart <craiglockhart81@gmail.com>
 *	@copyright		@@COPYRIGHT@@
 *	@file			@@FILE@@
 *	@file_Version	$Rev: 1937 $
@@ -19,7 +19,7 @@ use MyCLabs\Enum\Enum;
 *
 *	Class to handle months.
 *
-*	@package		Frozensheep\RightmoveADF\Groups
+*	@package		Craiglockhart81\RightmoveADF\Groups
 *
 */
 class Months extends Enum implements \JsonSerializable {

@@ -2,20 +2,20 @@
 /**
 *	This file contains the Max Exception Class.
 *
-*	@package	Frozensheep\Synthesize
-*	@author		Jacob Wyke <jacob@frozensheep.com>
+*	@package	Craiglockhart81\Synthesize
+*	@author		Craig Lockhart <craiglockhart81@gmail.com>
 *	@license	MIT
 *
 */
 
-namespace Frozensheep\Synthesize\Exception;
+namespace Craiglockhart81\Synthesize\Exception;
 
 /**
 *	Max Exception Class
 *
 *	Exception for a value outside of the maxed allowed.
 *
-*	@package	Frozensheep\Synthesize
+*	@package	Craiglockhart81\Synthesize
 *
 */
 class MaxException extends \RuntimeException {

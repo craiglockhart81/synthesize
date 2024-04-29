@@ -2,19 +2,19 @@
 /**
 *	This file contains the Types interface.
 *
-*	@package	Frozensheep\Synthesize
-*	@author		Jacob Wyke <jacob@frozensheep.com>
+*	@package	Craiglockhart81\Synthesize
+*	@author		Craig Lockhart <craiglockhart81@gmail.com>
 *	@license	MIT
 *
 */
 
-namespace Frozensheep\Synthesize\Type;
+namespace Craiglockhart81\Synthesize\Type;
 
 /**
 *	Types Interface
 *
 *	The Interface for all data types used in the synthesize process.
-*	@package	Frozensheep\Synthesize
+*	@package	Craiglockhart81\Synthesize
 *
 */
 interface TypesInterface {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Frozensheep\Synthesize\Tests;
+namespace Craiglockhart81\Synthesize\Tests;
 
-use Frozensheep\Synthesize\Tests\Type\Fixtures\IdFixture;
-use Frozensheep\Synthesize\Tests\Type\Fixtures\JSONFixture;
+use Craiglockhart81\Synthesize\Tests\Type\Fixtures\IdFixture;
+use Craiglockhart81\Synthesize\Tests\Type\Fixtures\JSONFixture;
 
 class SynthesizerTest extends \PHPUnit_Framework_TestCase {
 
@@ -28,7 +28,7 @@ class SynthesizerTest extends \PHPUnit_Framework_TestCase {
 	}
 
 	public function testBadPropertyGet(){
-		$this->setExpectedException('Frozensheep\Synthesize\Exception\SynthesizeException');
+		$this->setExpectedException('Craiglockhart81\Synthesize\Exception\SynthesizeException');
 		$this->objSynthesize->BadId;
 	}
 
@@ -44,11 +44,11 @@ class SynthesizerTest extends \PHPUnit_Framework_TestCase {
 	}
 
 	public function testMethodGet(){
-		$this->assertInstanceOf('Frozensheep\Synthesize\Type\IdObject', $this->objSynthesize->Id());
+		$this->assertInstanceOf('Craiglockhart81\Synthesize\Type\IdObject', $this->objSynthesize->Id());
 	}
 
 	public function testBadMethodGet(){
-		$this->setExpectedException('Frozensheep\Synthesize\Exception\MissingMethodException');
+		$this->setExpectedException('Craiglockhart81\Synthesize\Exception\MissingMethodException');
 		$this->objSynthesize->BadId();
 	}
 
@@ -57,7 +57,7 @@ class SynthesizerTest extends \PHPUnit_Framework_TestCase {
 	}
 
 	public function testBadMethodCall(){
-		$this->setExpectedException('Frozensheep\Synthesize\Exception\MissingMethodException');
+		$this->setExpectedException('Craiglockhart81\Synthesize\Exception\MissingMethodException');
 		$this->objSynthesize->doesntExist();
 	}
 
@@ -79,14 +79,14 @@ class SynthesizerTest extends \PHPUnit_Framework_TestCase {
 	}
 
 	public function testGetSynthesize(){
-		$this->assertInstanceOf('Frozensheep\Synthesize\Synthesize', $this->objSynthesize->getSynthesize());
+		$this->assertInstanceOf('Craiglockhart81\Synthesize\Synthesize', $this->objSynthesize->getSynthesize());
 		$objSynthesize = $this->objSynthesize->getSynthesize();
-		$this->assertInstanceOf('Frozensheep\Synthesize\Synthesize', $this->objSynthesize->getSynthesize());
+		$this->assertInstanceOf('Craiglockhart81\Synthesize\Synthesize', $this->objSynthesize->getSynthesize());
 		$this->assertEquals($objSynthesize, $this->objSynthesize->getSynthesize());
 	}
 
 	public function testCreateSynthesize(){
-		$this->assertInstanceOf('Frozensheep\Synthesize\Synthesize', $this->objSynthesize->_createSynthesize());
+		$this->assertInstanceOf('Craiglockhart81\Synthesize\Synthesize', $this->objSynthesize->_createSynthesize());
 
 		$this->markTestIncomplete("Test with different synthesize options passed.");
 	}
@@ -98,7 +98,7 @@ class SynthesizerTest extends \PHPUnit_Framework_TestCase {
 	}
 
 	public function testJSONLoadFailure(){
-		$this->setExpectedException('Frozensheep\Synthesize\Exception\MissingOptionsFileException');
+		$this->setExpectedException('Craiglockhart81\Synthesize\Exception\MissingOptionsFileException');
 		$this->objSynthesize->_loadOptionsFromFile('doesnt_exist.json');
 	}
 

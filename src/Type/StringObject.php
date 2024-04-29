@@ -2,23 +2,23 @@
 /**
 *	File Containing the String Object class.
 *
-*	@package	Frozensheep\Synthesize
-*	@author		Jacob Wyke <jacob@frozensheep.com>
+*	@package	Craiglockhart81\Synthesize
+*	@author		Craig Lockhart <craiglockhart81@gmail.com>
 *	@license	MIT
 *
 */
 
-namespace Frozensheep\Synthesize\Type;
+namespace Craiglockhart81\Synthesize\Type;
 
-use Frozensheep\Synthesize\Type\Type;
-use Frozensheep\Synthesize\Exception\LengthException;
+use Craiglockhart81\Synthesize\Type\Type;
+use Craiglockhart81\Synthesize\Exception\LengthException;
 
 /**
 *	String Object Class
 *
 *	A string data class.
 *
-*	@package	Frozensheep\Synthesize
+*	@package	Craiglockhart81\Synthesize
 *
 */
 class StringObject extends Type {

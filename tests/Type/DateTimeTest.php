@@ -1,8 +1,8 @@
 <?php
 
-namespace Frozensheep\Synthesize\Tests\Type;
+namespace Craiglockhart81\Synthesize\Tests\Type;
 
-use Frozensheep\Synthesize\Tests\Type\Fixtures\DateTimeFixture;
+use Craiglockhart81\Synthesize\Tests\Type\Fixtures\DateTimeFixture;
 
 class DateTimeTest extends \PHPUnit_Framework_TestCase {
 
@@ -19,17 +19,17 @@ class DateTimeTest extends \PHPUnit_Framework_TestCase {
 	}
 
 	public function testPossitiveInt(){
-		$this->setExpectedException('Frozensheep\Synthesize\Exception\TypeException');
+		$this->setExpectedException('Craiglockhart81\Synthesize\Exception\TypeException');
 		$this->objDateTime->datetime = 4;
 	}
 
 	public function testNagativeInt(){
-		$this->setExpectedException('Frozensheep\Synthesize\Exception\TypeException');
+		$this->setExpectedException('Craiglockhart81\Synthesize\Exception\TypeException');
 		$this->objDateTime->datetime = -4;
 	}
 
 	public function testZero(){
-		$this->setExpectedException('Frozensheep\Synthesize\Exception\TypeException');
+		$this->setExpectedException('Craiglockhart81\Synthesize\Exception\TypeException');
 		$this->objDateTime->datetime = 0;
 	}
 
@@ -39,17 +39,17 @@ class DateTimeTest extends \PHPUnit_Framework_TestCase {
 	}
 
 	public function testFloat(){
-		$this->setExpectedException('Frozensheep\Synthesize\Exception\TypeException');
+		$this->setExpectedException('Craiglockhart81\Synthesize\Exception\TypeException');
 		$this->objDateTime->datetime = 4.5;
 	}
 
 	public function testNegtiveFloat(){
-		$this->setExpectedException('Frozensheep\Synthesize\Exception\TypeException');
+		$this->setExpectedException('Craiglockhart81\Synthesize\Exception\TypeException');
 		$this->objDateTime->datetime = -4.5;
 	}
 
 	public function testString(){
-		$this->setExpectedException('Frozensheep\Synthesize\Exception\TypeException');
+		$this->setExpectedException('Craiglockhart81\Synthesize\Exception\TypeException');
 		$this->objDateTime->datetime = 'hello';
 	}
 
@@ -59,12 +59,12 @@ class DateTimeTest extends \PHPUnit_Framework_TestCase {
 	}
 
 	public function testStringInt(){
-		$this->setExpectedException('Frozensheep\Synthesize\Exception\TypeException');
+		$this->setExpectedException('Craiglockhart81\Synthesize\Exception\TypeException');
 		$this->objDateTime->datetime1 = '4';
 	}
 
 	public function testArray(){
-		$this->setExpectedException('Frozensheep\Synthesize\Exception\TypeException');
+		$this->setExpectedException('Craiglockhart81\Synthesize\Exception\TypeException');
 		$this->objDateTime->datetime1 = array();
 	}
 
@@ -84,7 +84,7 @@ class DateTimeTest extends \PHPUnit_Framework_TestCase {
 	}
 
 	public function testInvalidClass(){
-		$this->setExpectedException('Frozensheep\Synthesize\Exception\ClassException');
+		$this->setExpectedException('Craiglockhart81\Synthesize\Exception\ClassException');
 		$this->objDateTime->datetime = new \stdClass;
 	}
 

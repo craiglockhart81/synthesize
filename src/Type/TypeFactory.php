@@ -2,23 +2,23 @@
 /**
 *	This file contains the Type Factory Class.
 *
-*	@package	Frozensheep\Synthesize
-*	@author		Jacob Wyke <jacob@frozensheep.com>
+*	@package	Craiglockhart81\Synthesize
+*	@author		Craig Lockhart <craiglockhart81@gmail.com>
 *	@license	MIT
 *
 */
 
-namespace Frozensheep\Synthesize\Type;
+namespace Craiglockhart81\Synthesize\Type;
 
-use Frozensheep\Synthesize\Type\SynthesizeOption;
-use Frozensheep\Synthesize\Exception\UnknownTypeException;
+use Craiglockhart81\Synthesize\Type\SynthesizeOption;
+use Craiglockhart81\Synthesize\Exception\UnknownTypeException;
 
 /**
 *	Type Factory Class
 *
 *	Class build the different synthesize types.
 *
-*	@package	Frozensheep\Synthesize
+*	@package	Craiglockhart81\Synthesize
 *
 */
 class TypeFactory {
@@ -27,7 +27,7 @@ class TypeFactory {
 	*	Create Method
 	*
 	*	Returns a type object based on the options given.
-	*	@param Frozensheep\Synthesize\Type\SynthesizeOption $objOptions The options object.
+	*	@param Craiglockhart81\Synthesize\Type\SynthesizeOption $objOptions The options object.
 	*	return object The object for the type created.
 	*/
 	static public function create(SynthesizeOption $objOptions){
@@ -72,7 +72,7 @@ class TypeFactory {
 			$strType = $arrReservere[strtolower($strType)];
 		}
 
-		$strType = 'Frozensheep\\Synthesize\\Type\\'.ucfirst($strType);
+		$strType = 'Craiglockhart81\\Synthesize\\Type\\'.ucfirst($strType);
 
 		return $strType;
 	}

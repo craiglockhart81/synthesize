@@ -2,22 +2,22 @@
 /**
 *	File containing the Fixed Dictionary Object class.
 *
-*	@package	Frozensheep\Synthesize
-*	@author		Jacob Wyke <jacob@frozensheep.com>
+*	@package	Craiglockhart81\Synthesize
+*	@author		Craig Lockhart <craiglockhart81@gmail.com>
 *	@license	MIT
 *
 */
 
-namespace Frozensheep\Synthesize\Type;
+namespace Craiglockhart81\Synthesize\Type;
 
-use Frozensheep\Synthesize\Type\DictionaryObject;
+use Craiglockhart81\Synthesize\Type\DictionaryObject;
 
 /**
 *	Fixed Dictionary Object Class
 *
 *	An abstract data type for a fixed dictionaries.
 *
-*	@package	Frozensheep\Synthesize
+*	@package	Craiglockhart81\Synthesize
 *
 */
 abstract class FixedDictionaryObject extends DictionaryObject {

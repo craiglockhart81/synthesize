@@ -2,18 +2,18 @@
 /**
 *	This file contains the Synthesizer Trait.
 *
-*	@package	Frozensheep\Synthesize
-*	@author		Jacob Wyke <jacob@frozensheep.com>
+*	@package	Craiglockhart81\Synthesize
+*	@author		Craig Lockhart <craiglockhart81@gmail.com>
 *	@license	MIT
 *
 */
 
-namespace Frozensheep\Synthesize;
+namespace Craiglockhart81\Synthesize;
 
-use Frozensheep\Synthesize\Synthesize;
-use Frozensheep\Synthesize\Exception\MissingMethodException;
-use Frozensheep\Synthesize\Exception\SynthesizeException;
-use Frozensheep\Synthesize\Exception\MissingOptionsFileException;
+use Craiglockhart81\Synthesize\Synthesize;
+use Craiglockhart81\Synthesize\Exception\MissingMethodException;
+use Craiglockhart81\Synthesize\Exception\SynthesizeException;
+use Craiglockhart81\Synthesize\Exception\MissingOptionsFileException;
 
 /**
 *	Synthesizer Trait
@@ -31,7 +31,7 @@ use Frozensheep\Synthesize\Exception\MissingOptionsFileException;
 *		'files' => array('type' => 'Dictionary')
 *	);
 *
-*	@package	Frozensheep\Synthesize
+*	@package	Craiglockhart81\Synthesize
 *
 */
 trait Synthesizer {
@@ -123,7 +123,7 @@ trait Synthesizer {
 	*	Get Synthesize Method
 	*
 	*	Sets up and returns the synthesize object.
-	*	@return \Frozensheep\Synthesize
+	*	@return \Craiglockhart81\Synthesize
 	*/
     public function getSynthesize(){
 		if(!$this->_objSynthesize instanceof Synthesize){
@@ -138,7 +138,7 @@ trait Synthesizer {
 	*
 	*	Factory to create the a synthesize object. Currently only accepts synthesize options in array format.
 	*	@param mixed $mixSynthesize The synthesize options. If none are passed it checks for build options from the calling class.
-	*	@return \Frozensheep\Synthesize
+	*	@return \Craiglockhart81\Synthesize
 	*/
     private function _createSynthesize($mixSynthesize = null){
 		//override the values set in the class with the ones passed
@@ -166,7 +166,7 @@ trait Synthesizer {
 	*	Attempts to load the synthesize options from the JSON file passed.
 	*	@param string $strFileName The name of the JSON file where the options are.
 	*	@throws MissingOptionsFileException if file cannot be found.
-	*	@return \Frozensheep\Synthesize
+	*	@return \Craiglockhart81\Synthesize
 	*/
     private function _loadOptionsFromFile($strFileName){
     	//get the path for the class file and name and add the .json extension to the file name

@@ -1,8 +1,8 @@
 <?php
 
-namespace Frozensheep\Synthesize\Tests\Type;
+namespace Craiglockhart81\Synthesize\Tests\Type;
 
-use Frozensheep\Synthesize\Type\SynthesizeOption;
+use Craiglockhart81\Synthesize\Type\SynthesizeOption;
 
 class SynthesizeOptionTest extends \PHPUnit_Framework_TestCase {
 

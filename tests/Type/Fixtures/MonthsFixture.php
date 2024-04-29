@@ -1,6 +1,6 @@
 <?php
 
-namespace Frozensheep\Synthesize\Tests\Type\Fixtures;
+namespace Craiglockhart81\Synthesize\Tests\Type\Fixtures;
 
 use MyCLabs\Enum\Enum;
 

@@ -2,20 +2,20 @@
 /**
 *	This file contains the Range Exception Class.
 *
-*	@package	Frozensheep\Synthesize
-*	@author		Jacob Wyke <jacob@frozensheep.com>
+*	@package	Craiglockhart81\Synthesize
+*	@author		Craig Lockhart <craiglockhart81@gmail.com>
 *	@license	MIT
 *
 */
 
-namespace Frozensheep\Synthesize\Exception;
+namespace Craiglockhart81\Synthesize\Exception;
 
 /**
 *	Range Exception Class
 *
 *	Exception for a value outside of the allowed range.
 *
-*	@package	Frozensheep\Synthesize
+*	@package	Craiglockhart81\Synthesize
 *
 */
 class RangeException extends \RuntimeException {

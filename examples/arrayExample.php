@@ -2,8 +2,8 @@
 /**
 *	This file contains example code for how to use the Synthesize package with an array.
 *
-*	@package	Frozensheep\Synthesize
-*	@author		Jacob Wyke <jacob@frozensheep.com>
+*	@package	Craiglockhart81\Synthesize
+*	@author		Craig Lockhart <craiglockhart81@gmail.com>
 *	@license	MIT
 *
 */
@@ -14,14 +14,14 @@ require_once(__DIR__.'/../vendor/autoload.php');
 include('Months.php');
 
 //use the Synthesizer
-use Frozensheep\Synthesize\Synthesizer;
+use Craiglockhart81\Synthesize\Synthesizer;
 
 /**
 *	ArrayExample Class
 *
 *	Class to show an example of how to use the Synthesize package with an array.
 *
-*	@package	Frozensheep\Synthesize
+*	@package	Craiglockhart81\Synthesize
 *
 */
 class ArrayExample implements \JsonSerializable {

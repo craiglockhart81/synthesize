@@ -1,8 +1,8 @@
 <?php
 
-namespace Frozensheep\Synthesize\Tests\Type;
+namespace Craiglockhart81\Synthesize\Tests\Type;
 
-use Frozensheep\Synthesize\Tests\Type\Fixtures\ArrayFixture;
+use Craiglockhart81\Synthesize\Tests\Type\Fixtures\ArrayFixture;
 
 class ArrayTest extends \PHPUnit_Framework_TestCase {
 
@@ -15,21 +15,21 @@ class ArrayTest extends \PHPUnit_Framework_TestCase {
 	public function testEmptyArrayOnCreate(){
 		$this->assertEquals(0, $this->objArray->array()->count());
 		$this->assertEquals(array(), $this->objArray->array);
-		$this->assertInstanceOf('Frozensheep\Synthesize\Type\ArrayObject', $this->objArray->array());
+		$this->assertInstanceOf('Craiglockhart81\Synthesize\Type\ArrayObject', $this->objArray->array());
 	}
 
 	public function testPossitiveInt(){
-		$this->setExpectedException('Frozensheep\Synthesize\Exception\TypeException');
+		$this->setExpectedException('Craiglockhart81\Synthesize\Exception\TypeException');
 		$this->objArray->array = 4;
 	}
 
 	public function testNagativeInt(){
-		$this->setExpectedException('Frozensheep\Synthesize\Exception\TypeException');
+		$this->setExpectedException('Craiglockhart81\Synthesize\Exception\TypeException');
 		$this->objArray->array = -4;
 	}
 
 	public function testZero(){
-		$this->setExpectedException('Frozensheep\Synthesize\Exception\TypeException');
+		$this->setExpectedException('Craiglockhart81\Synthesize\Exception\TypeException');
 		$this->objArray->array = 0;
 	}
 
@@ -39,22 +39,22 @@ class ArrayTest extends \PHPUnit_Framework_TestCase {
 	}
 
 	public function testFloat(){
-		$this->setExpectedException('Frozensheep\Synthesize\Exception\TypeException');
+		$this->setExpectedException('Craiglockhart81\Synthesize\Exception\TypeException');
 		$this->objArray->array = 4.5;
 	}
 
 	public function testNegtiveFloat(){
-		$this->setExpectedException('Frozensheep\Synthesize\Exception\TypeException');
+		$this->setExpectedException('Craiglockhart81\Synthesize\Exception\TypeException');
 		$this->objArray->array = -4.5;
 	}
 
 	public function testString(){
-		$this->setExpectedException('Frozensheep\Synthesize\Exception\TypeException');
+		$this->setExpectedException('Craiglockhart81\Synthesize\Exception\TypeException');
 		$this->objArray->array = 'hello';
 	}
 
 	public function testStringInt(){
-		$this->setExpectedException('Frozensheep\Synthesize\Exception\TypeException');
+		$this->setExpectedException('Craiglockhart81\Synthesize\Exception\TypeException');
 		$this->objArray->array = '4';
 	}
 
@@ -71,7 +71,7 @@ class ArrayTest extends \PHPUnit_Framework_TestCase {
 	}
 
 	public function testObject(){
-		$this->setExpectedException('Frozensheep\Synthesize\Exception\TypeException');
+		$this->setExpectedException('Craiglockhart81\Synthesize\Exception\TypeException');
 		$this->objArray->array1 = new \DateTime();
 	}
 
@@ -98,7 +98,7 @@ class ArrayTest extends \PHPUnit_Framework_TestCase {
 	}
 
 	public function testMaxAbove(){
-		$this->setExpectedException('Frozensheep\Synthesize\Exception\MaxException');
+		$this->setExpectedException('Craiglockhart81\Synthesize\Exception\MaxException');
 		$this->objArray->array2 = array();
 		$this->objArray->array2()[] = 1;
 		$this->objArray->array2()[] = 2;

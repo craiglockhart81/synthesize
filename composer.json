@@ -1,15 +1,14 @@
 {
-	"name": "frozensheep/synthesize",
+	"name": "craiglockhart81/synthesize",
 	"type": "library",
 	"description": "Synthesizer trait to auto generate getter and setter access for objects.",
 	"keywords": ["synthesize", "synthesizer"],
-	"homepage": "https://github.com/frozensheep/synthesize",
+	"homepage": "https://github.com/craiglockhart81/synthesize",
 	"license": "MIT",
 	"authors": [
 		{
-			"name": "Jacob Wyke",
-			"email": "jacob@frozensheep.com",
-			"homepage": "https://frozensheep.com"
+			"name": "Craig Lockhart",
+			"email": "craiglockhart81@gmail.com"
 		}
 	],
 	"require": {
@@ -18,8 +17,8 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"Frozensheep\\Synthesize\\": "src",
-			"Frozensheep\\Synthesize\\Tests\\": "tests"
+			"Craiglockhart81\\Synthesize\\": "src",
+			"Craiglockhart81\\Synthesize\\Tests\\": "tests"
 		}
 	}
 }

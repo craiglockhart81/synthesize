@@ -2,22 +2,22 @@
 /**
 *	File Containing the Boolean Object class.
 *
-*	@package	Frozensheep\Synthesize
-*	@author		Jacob Wyke <jacob@frozensheep.com>
+*	@package	Craiglockhart81\Synthesize
+*	@author		Craig Lockhart <craiglockhart81@gmail.com>
 *	@license	MIT
 *
 */
 
-namespace Frozensheep\Synthesize\Type;
+namespace Craiglockhart81\Synthesize\Type;
 
-use Frozensheep\Synthesize\Type\Type;
+use Craiglockhart81\Synthesize\Type\Type;
 
 /**
 *	Boolean Object Class
 *
 *	A boolean data class.
 *
-*	@package	Frozensheep\Synthesize
+*	@package	Craiglockhart81\Synthesize
 *
 */
 class BooleanObject extends Type {

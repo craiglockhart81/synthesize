@@ -1,8 +1,8 @@
 <?php
 
-namespace Frozensheep\Synthesize\Tests\Type;
+namespace Craiglockhart81\Synthesize\Tests\Type;
 
-use Frozensheep\Synthesize\Tests\Type\Fixtures\ObjectArrayFixture;
+use Craiglockhart81\Synthesize\Tests\Type\Fixtures\ObjectArrayFixture;
 
 class ObjectArrayTest extends \PHPUnit_Framework_TestCase {
 
@@ -15,21 +15,21 @@ class ObjectArrayTest extends \PHPUnit_Framework_TestCase {
 	public function testEmptyArrayOnCreate(){
 		$this->assertEquals(0, $this->objObjectArray->objectarray()->count());
 		$this->assertEquals(array(), $this->objObjectArray->objectarray);
-		$this->assertInstanceOf('Frozensheep\Synthesize\Type\ArrayObject', $this->objObjectArray->objectarray());
+		$this->assertInstanceOf('Craiglockhart81\Synthesize\Type\ArrayObject', $this->objObjectArray->objectarray());
 	}
 
 	public function testPossitiveInt(){
-		$this->setExpectedException('Frozensheep\Synthesize\Exception\TypeException');
+		$this->setExpectedException('Craiglockhart81\Synthesize\Exception\TypeException');
 		$this->objObjectArray->objectarray = 4;
 	}
 
 	public function testNagativeInt(){
-		$this->setExpectedException('Frozensheep\Synthesize\Exception\TypeException');
+		$this->setExpectedException('Craiglockhart81\Synthesize\Exception\TypeException');
 		$this->objObjectArray->objectarray = -4;
 	}
 
 	public function testZero(){
-		$this->setExpectedException('Frozensheep\Synthesize\Exception\TypeException');
+		$this->setExpectedException('Craiglockhart81\Synthesize\Exception\TypeException');
 		$this->objObjectArray->objectarray = 0;
 	}
 
@@ -39,22 +39,22 @@ class ObjectArrayTest extends \PHPUnit_Framework_TestCase {
 	}
 
 	public function testFloat(){
-		$this->setExpectedException('Frozensheep\Synthesize\Exception\TypeException');
+		$this->setExpectedException('Craiglockhart81\Synthesize\Exception\TypeException');
 		$this->objObjectArray->objectarray = 4.5;
 	}
 
 	public function testNegtiveFloat(){
-		$this->setExpectedException('Frozensheep\Synthesize\Exception\TypeException');
+		$this->setExpectedException('Craiglockhart81\Synthesize\Exception\TypeException');
 		$this->objObjectArray->objectarray = -4.5;
 	}
 
 	public function testString(){
-		$this->setExpectedException('Frozensheep\Synthesize\Exception\TypeException');
+		$this->setExpectedException('Craiglockhart81\Synthesize\Exception\TypeException');
 		$this->objObjectArray->objectarray = 'hello';
 	}
 
 	public function testStringInt(){
-		$this->setExpectedException('Frozensheep\Synthesize\Exception\TypeException');
+		$this->setExpectedException('Craiglockhart81\Synthesize\Exception\TypeException');
 		$this->objObjectArray->objectarray = '4';
 	}
 
@@ -72,12 +72,12 @@ class ObjectArrayTest extends \PHPUnit_Framework_TestCase {
 	}
 
 	public function badArray(){
-		$this->setExpectedException('Frozensheep\Synthesize\Exception\TypeException');
+		$this->setExpectedException('Craiglockhart81\Synthesize\Exception\TypeException');
 		$this->objObjectArray->objectarray = array(1,2,3);
 	}
 
 	public function testObject(){
-		$this->setExpectedException('Frozensheep\Synthesize\Exception\TypeException');
+		$this->setExpectedException('Craiglockhart81\Synthesize\Exception\TypeException');
 		$this->objObjectArray->objectarray1 = new \DateTime();
 	}
 
@@ -115,7 +115,7 @@ class ObjectArrayTest extends \PHPUnit_Framework_TestCase {
 	}
 
 	public function testPassingBadObjectParams(){
-		$this->setExpectedException('Frozensheep\Synthesize\Exception\TypeException');
+		$this->setExpectedException('Craiglockhart81\Synthesize\Exception\TypeException');
 		$this->objObjectArray->objectarray1 = array();
 		$this->objObjectArray->objectarray1()[] = 'hello';
 	}
@@ -135,7 +135,7 @@ class ObjectArrayTest extends \PHPUnit_Framework_TestCase {
 	}
 
 	public function testMaxAbove(){
-		$this->setExpectedException('Frozensheep\Synthesize\Exception\MaxException');
+		$this->setExpectedException('Craiglockhart81\Synthesize\Exception\MaxException');
 		$this->objObjectArray->objectarray2 = array();
 		$this->objObjectArray->objectarray2()[] = new \DateTime();
 		$this->objObjectArray->objectarray2()[] = new \DateTime();

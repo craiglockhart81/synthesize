@@ -2,24 +2,24 @@
 /**
 *	File Containing the Object Object class.
 *
-*	@package	Frozensheep\Synthesize
-*	@author		Jacob Wyke <jacob@frozensheep.com>
+*	@package	Craiglockhart81\Synthesize
+*	@author		Craig Lockhart <craiglockhart81@gmail.com>
 *	@license	MIT
 *
 */
 
-namespace Frozensheep\Synthesize\Type;
+namespace Craiglockhart81\Synthesize\Type;
 
-use Frozensheep\Synthesize\Type\Type;
-use Frozensheep\Synthesize\Exception\ClassException;
-use Frozensheep\Synthesize\Exception\TypeException;
+use Craiglockhart81\Synthesize\Type\Type;
+use Craiglockhart81\Synthesize\Exception\ClassException;
+use Craiglockhart81\Synthesize\Exception\TypeException;
 
 /**
 *	Object Object Class
 *
 *	An object data class.
 *
-*	@package	Frozensheep\Synthesize
+*	@package	Craiglockhart81\Synthesize
 *
 */
 class ObjectObject extends Type {

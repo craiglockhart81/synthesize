@@ -1,10 +1,10 @@
 <?php
 
-namespace Frozensheep\Synthesize\Tests\Type;
+namespace Craiglockhart81\Synthesize\Tests\Type;
 
-use Frozensheep\Synthesize\Type\SynthesizeOption;
-use Frozensheep\Synthesize\Type\TypeFactory;
-use Frozensheep\Synthesize\Tests\Type\Fixtures\MonthsFixture;
+use Craiglockhart81\Synthesize\Type\SynthesizeOption;
+use Craiglockhart81\Synthesize\Type\TypeFactory;
+use Craiglockhart81\Synthesize\Tests\Type\Fixtures\MonthsFixture;
 
 class TypeFactoryTest extends \PHPUnit_Framework_TestCase {
 
@@ -12,59 +12,59 @@ class TypeFactoryTest extends \PHPUnit_Framework_TestCase {
 		return array(
 			"arrayObject" => array(
 				array('type' => 'arrayObject'),
-				'Frozensheep\Synthesize\Type\ArrayObject'
+				'Craiglockhart81\Synthesize\Type\ArrayObject'
 			),
 			"boolean" => array(
 				array('type' => 'boolean'),
-				'Frozensheep\Synthesize\Type\BooleanObject'
+				'Craiglockhart81\Synthesize\Type\BooleanObject'
 			),
 			"dateTime" => array(
 				array('type' => 'dateTime'),
-				'Frozensheep\Synthesize\Type\DateTimeObject'
+				'Craiglockhart81\Synthesize\Type\DateTimeObject'
 			),
 			"dictionary" => array(
 				array('type' => 'dictionary'),
-				'Frozensheep\Synthesize\Type\DictionaryObject'
+				'Craiglockhart81\Synthesize\Type\DictionaryObject'
 			),
 			"enum" => array(
-				array('type' => 'enum', 'class' => 'Frozensheep\Synthesize\Tests\Type\Fixtures\MonthsFixture'),
-				'Frozensheep\Synthesize\Type\EnumObject'
+				array('type' => 'enum', 'class' => 'Craiglockhart81\Synthesize\Tests\Type\Fixtures\MonthsFixture'),
+				'Craiglockhart81\Synthesize\Type\EnumObject'
 			),
 			"float" => array(
 				array('type' => 'float'),
-				'Frozensheep\Synthesize\Type\FloatObject'
+				'Craiglockhart81\Synthesize\Type\FloatObject'
 			),
 			"id" => array(
 				array('type' => 'id'),
-				'Frozensheep\Synthesize\Type\IdObject'
+				'Craiglockhart81\Synthesize\Type\IdObject'
 			),
 			"int" => array(
 				array('type' => 'int'),
-				'Frozensheep\Synthesize\Type\IntObject'
+				'Craiglockhart81\Synthesize\Type\IntObject'
 			),
 			"number" => array(
 				array('type' => 'number'),
-				'Frozensheep\Synthesize\Type\NumberObject'
+				'Craiglockhart81\Synthesize\Type\NumberObject'
 			),
 			"object" => array(
 				array('type' => 'object'),
-				'Frozensheep\Synthesize\Type\ObjectObject'
+				'Craiglockhart81\Synthesize\Type\ObjectObject'
 			),
 			"objectArray" => array(
 				array('type' => 'objectArray'),
-				'Frozensheep\Synthesize\Type\ObjectArrayObject'
+				'Craiglockhart81\Synthesize\Type\ObjectArrayObject'
 			),
 			"resource" => array(
 				array('type' => 'resource'),
-				'Frozensheep\Synthesize\Type\ResourceObject'
+				'Craiglockhart81\Synthesize\Type\ResourceObject'
 			),
 			"string" => array(
 				array('type' => 'string'),
-				'Frozensheep\Synthesize\Type\StringObject'
+				'Craiglockhart81\Synthesize\Type\StringObject'
 			),
 			"default" => array(
 				array(),
-				'Frozensheep\Synthesize\Type\IdObject'
+				'Craiglockhart81\Synthesize\Type\IdObject'
 			)
 		);
 	}
@@ -82,7 +82,7 @@ class TypeFactoryTest extends \PHPUnit_Framework_TestCase {
 	public function testCreateFakeType(){
 		$objSynthesizeOptions = new SynthesizeOption(array('type' => 'fake'));
 
-		$this->setExpectedException('Frozensheep\Synthesize\Exception\UnknownTypeException');
+		$this->setExpectedException('Craiglockhart81\Synthesize\Exception\UnknownTypeException');
 		$objType = TypeFactory::create($objSynthesizeOptions);
 	}
 }

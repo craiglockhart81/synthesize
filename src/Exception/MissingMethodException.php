@@ -2,20 +2,20 @@
 /**
 *	This file contains the Missing Method Exception Class.
 *
-*	@package	Frozensheep\Synthesize
-*	@author		Jacob Wyke <jacob@frozensheep.com>
+*	@package	Craiglockhart81\Synthesize
+*	@author		Craig Lockhart <craiglockhart81@gmail.com>
 *	@license	MIT
 *
 */
 
-namespace Frozensheep\Synthesize\Exception;
+namespace Craiglockhart81\Synthesize\Exception;
 
 /**
 *	MIssing Method Exception Class
 *
 *	Exception for attempting to access a method that does not exist and that cannot be dealt with through the synthesizer.
 *
-*	@package	Frozensheep\Synthesize
+*	@package	Craiglockhart81\Synthesize
 *
 */
 class MissingMethodException extends \BadFunctionCallException {

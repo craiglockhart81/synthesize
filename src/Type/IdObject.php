@@ -2,22 +2,22 @@
 /**
 *	File containing the Id Object data type class.
 *
-*	@package	Frozensheep\Synthesize
-*	@author		Jacob Wyke <jacob@frozensheep.com>
+*	@package	Craiglockhart81\Synthesize
+*	@author		Craig Lockhart <craiglockhart81@gmail.com>
 *	@license	MIT
 *
 */
 
-namespace Frozensheep\Synthesize\Type;
+namespace Craiglockhart81\Synthesize\Type;
 
-use Frozensheep\Synthesize\Type\Type;
+use Craiglockhart81\Synthesize\Type\Type;
 
 /**
 *	Id Object Class
 *
 *	A generic data type for unknown data types.
 *
-*	@package	Frozensheep\Synthesize
+*	@package	Craiglockhart81\Synthesize
 *
 */
 class IdObject extends Type {

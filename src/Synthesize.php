@@ -2,24 +2,24 @@
 /**
 *	This file contains the Synthesize Class.
 *
-*	@package	Frozensheep\Synthesize
-*	@author		Jacob Wyke <jacob@frozensheep.com>
+*	@package	Craiglockhart81\Synthesize
+*	@author		Craig Lockhart <craiglockhart81@gmail.com>
 *	@license	MIT
 *
 */
 
-namespace Frozensheep\Synthesize;
+namespace Craiglockhart81\Synthesize;
 
-use Frozensheep\Synthesize\Type\SynthesizeOption;
-use Frozensheep\Synthesize\Type\TypeFactory;
-use Frozensheep\Synthesize\Exception\InvalidJSONException;
+use Craiglockhart81\Synthesize\Type\SynthesizeOption;
+use Craiglockhart81\Synthesize\Type\TypeFactory;
+use Craiglockhart81\Synthesize\Exception\InvalidJSONException;
 
 /**
 *	Synthesize Class
 *
 *	Class to hold all the synthesized data.
 *
-*	@package	Frozensheep\Synthesize
+*	@package	Craiglockhart81\Synthesize
 *
 */
 class Synthesize implements \Iterator, \JsonSerializable {
@@ -163,7 +163,7 @@ class Synthesize implements \Iterator, \JsonSerializable {
 	*	Create Method
 	*
 	*	Used internally to create the object used to store the data type.
-	*	@param \Frozensheep\Synthesize\Type\SynthesizeOption $objOption The options about what data object is required.
+	*	@param \Craiglockhart81\Synthesize\Type\SynthesizeOption $objOption The options about what data object is required.
 	*	@return object
 	*
 	*/
@@ -191,7 +191,7 @@ class Synthesize implements \Iterator, \JsonSerializable {
 	*
 	*	Returns the SynthesizeOption object for the given property.
 	*	@param string $strProperty The property you want the options for.
-	*	@return Frozensheep\Synthesize\Type\SynthesizeOption|false
+	*	@return Craiglockhart81\Synthesize\Type\SynthesizeOption|false
 	*/
 	public function &options($strProperty){
 		$strProperty = $this->_formatPropertyName($strProperty);

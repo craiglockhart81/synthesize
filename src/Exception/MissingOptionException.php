@@ -2,20 +2,20 @@
 /**
 *	This file contains the Missing Option Exception Class.
 *
-*	@package	Frozensheep\Synthesize
-*	@author		Jacob Wyke <jacob@frozensheep.com>
+*	@package	Craiglockhart81\Synthesize
+*	@author		Craig Lockhart <craiglockhart81@gmail.com>
 *	@license	MIT
 *
 */
 
-namespace Frozensheep\Synthesize\Exception;
+namespace Craiglockhart81\Synthesize\Exception;
 
 /**
 *	Missing Option Exception Class
 *
 *	Exception for a missing required option.
 *
-*	@package	Frozensheep\Synthesize
+*	@package	Craiglockhart81\Synthesize
 *
 */
 class MissingOptionException extends \RuntimeException {

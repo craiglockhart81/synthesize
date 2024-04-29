@@ -1,10 +1,10 @@
 <?php
 
-namespace Frozensheep\Synthesize\Tests\Type;
+namespace Craiglockhart81\Synthesize\Tests\Type;
 
-use Frozensheep\Synthesize\Tests\Type\Fixtures\EnumFixture;
-use Frozensheep\Synthesize\Tests\Type\Fixtures\BadEnumFixture;
-use Frozensheep\Synthesize\Tests\Type\Fixtures\MonthsFixture;
+use Craiglockhart81\Synthesize\Tests\Type\Fixtures\EnumFixture;
+use Craiglockhart81\Synthesize\Tests\Type\Fixtures\BadEnumFixture;
+use Craiglockhart81\Synthesize\Tests\Type\Fixtures\MonthsFixture;
 
 class EnumTest extends \PHPUnit_Framework_TestCase {
 
@@ -51,7 +51,7 @@ class EnumTest extends \PHPUnit_Framework_TestCase {
 	}
 
 	public function testMissingClassOption(){
-		$this->setExpectedException('Frozensheep\Synthesize\Exception\MissingOptionException');
+		$this->setExpectedException('Craiglockhart81\Synthesize\Exception\MissingOptionException');
 		$this->objBadEnum->enum = 1;
 	}
 

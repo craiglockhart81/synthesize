@@ -2,22 +2,22 @@
 /**
 *	File containing the Synthesize Option Class.
 *
-*	@package	Frozensheep\Synthesize
-*	@author		Jacob Wyke <jacob@frozensheep.com>
+*	@package	Craiglockhart81\Synthesize
+*	@author		Craig Lockhart <craiglockhart81@gmail.com>
 *	@license	MIT
 *
 */
 
-namespace Frozensheep\Synthesize\Type;
+namespace Craiglockhart81\Synthesize\Type;
 
-use Frozensheep\Synthesize\Type\FixedDictionaryObject;
+use Craiglockhart81\Synthesize\Type\FixedDictionaryObject;
 
 /**
 *	Synthesize Option Class
 *
 *	A fixed dictionary data type to hold the synthesize options in.
 *
-*	@package	Frozensheep\Synthesize
+*	@package	Craiglockhart81\Synthesize
 *
 */
 class SynthesizeOption extends FixedDictionaryObject {

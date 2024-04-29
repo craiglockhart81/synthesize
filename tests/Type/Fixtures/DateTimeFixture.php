@@ -1,8 +1,8 @@
 <?php
 
-namespace Frozensheep\Synthesize\Tests\Type\Fixtures;
+namespace Craiglockhart81\Synthesize\Tests\Type\Fixtures;
 
-use Frozensheep\Synthesize\Synthesizer;
+use Craiglockhart81\Synthesize\Synthesizer;
 
 class DateTimeFixture implements \JsonSerializable {
 

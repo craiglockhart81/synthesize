@@ -2,23 +2,23 @@
 /**
 *	File containing the Type class.
 *
-*	@package	Frozensheep\Synthesize
-*	@author		Jacob Wyke <jacob@frozensheep.com>
+*	@package	Craiglockhart81\Synthesize
+*	@author		Craig Lockhart <craiglockhart81@gmail.com>
 *	@license	MIT
 *
 */
 
-namespace Frozensheep\Synthesize\Type;
+namespace Craiglockhart81\Synthesize\Type;
 
-use Frozensheep\Synthesize\Type\TypesInterface;
-use Frozensheep\Synthesize\Exception\TypeException;
+use Craiglockhart81\Synthesize\Type\TypesInterface;
+use Craiglockhart81\Synthesize\Exception\TypeException;
 
 /**
 *	Type Class
 *
 *	The type class whic provides the most fundamental methods needed for all data types and acts as the parent class for many sub-data types.
 *
-*	@package	Frozensheep\Synthesize
+*	@package	Craiglockhart81\Synthesize
 *
 */
 class Type implements TypesInterface, \JsonSerializable {
@@ -95,7 +95,7 @@ class Type implements TypesInterface, \JsonSerializable {
 	/**
 	*	Set Options Method
 	*
-	*	@param \Frozensheep\Synthesize\Type\SynthesizeOption $objOption The options about what data object is required.
+	*	@param \Craiglockhart81\Synthesize\Type\SynthesizeOption $objOption The options about what data object is required.
 	*	@return void
 	*/
 	public function setOptions(SynthesizeOption $objOptions):void {
@@ -106,7 +106,7 @@ class Type implements TypesInterface, \JsonSerializable {
 	*	Options Method
 	*
 	*	Returns the SynthesizeOption object for the given property.
-	*	@return Frozensheep\Synthesize\Type\SynthesizeOption
+	*	@return Craiglockhart81\Synthesize\Type\SynthesizeOption
 	*/
 	public function options(){
 		return $this->_objOptions;
