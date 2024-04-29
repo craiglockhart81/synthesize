@@ -39,7 +39,7 @@ class DictionaryObject extends Type implements \Iterator, \Countable {
 	*	@param string $strProperty The requested property name.
 	*	@return mixed
 	*/
-    public function __get($strProperty){
+    public function __get($strProperty):mixed {
 		return $this->get($strProperty);
     }
 
@@ -51,7 +51,7 @@ class DictionaryObject extends Type implements \Iterator, \Countable {
 	*	@param mixed $mixValue The value to set.
 	*	@return null
 	*/
-    public function __set($strProperty, $mixValue){
+    public function __set($strProperty, $mixValue) {
 		$this->set($strProperty, $mixValue);
     }
 
@@ -61,7 +61,7 @@ class DictionaryObject extends Type implements \Iterator, \Countable {
 	*	Returns the string form of the data type.
 	*	@return string
 	*/
-	public function __toString(){
+	public function __toString():string {
 		return '';
 	}
 
@@ -71,7 +71,7 @@ class DictionaryObject extends Type implements \Iterator, \Countable {
 	*	Return the object rather than the value.
 	*	@return mixed
 	*/
-	public function &getValue(){
+	public function &getValue():mixed {
 		return $this;
 	}
 
@@ -83,7 +83,7 @@ class DictionaryObject extends Type implements \Iterator, \Countable {
 	*	@throws TypeException if valud is not valid.
 	*	@return bool
 	*/
-	public function setValue($mixValue){
+	public function setValue($mixValue):bool {
 		if($this->isValid($mixValue) || is_null($mixValue)){
 			$this->mixValue = $mixValue;
 			$this->updateKeys();
@@ -100,7 +100,7 @@ class DictionaryObject extends Type implements \Iterator, \Countable {
 	*	@param mixed $mixValue The value to check.
 	*	@return bool
 	*/
-	public function isValid($mixValue){
+	public function isValid($mixValue):bool {
 		if(is_array($mixValue)){
 			return true;
 		}else{
@@ -114,7 +114,7 @@ class DictionaryObject extends Type implements \Iterator, \Countable {
 	*	Returns the dictionary array
 	*	@return array
 	*/
-	public function all(){
+	public function all():array {
 		return $this->mixValue;
 	}
 
@@ -124,7 +124,7 @@ class DictionaryObject extends Type implements \Iterator, \Countable {
 	*	Returns all the keys of the dictionary.
 	*	@return array
 	*/
-	public function keys(){
+	public function keys():array {
 		return $this->_arrKeys;
 	}
 
@@ -135,7 +135,7 @@ class DictionaryObject extends Type implements \Iterator, \Countable {
 	*	@param array $arrDicationary The new dicationary.
 	*	@return void
 	*/
-	public function replace(Array $arrDicationary){
+	public function replace(Array $arrDicationary):void {
 		$this->setValue($arrDicationary);
 		$this->updateKeys();
 	}
@@ -147,7 +147,7 @@ class DictionaryObject extends Type implements \Iterator, \Countable {
 	*	@param string $strKey The name of the key.
 	*	@return mixed
 	*/
-	public function get($strKey){
+	public function get($strKey):mixed {
 		if($this->has($strKey)){
 			return $this->mixValue[$strKey];
 		}
@@ -163,7 +163,7 @@ class DictionaryObject extends Type implements \Iterator, \Countable {
 	*	@param mixed $mixValue The value to set.
 	*	@return void
 	*/
-	public function set($strKey, $mixValue){
+	public function set($strKey, $mixValue):void {
 		$this->mixValue[$strKey] = $mixValue;
 		$this->updateKeys();
 	}
@@ -174,7 +174,7 @@ class DictionaryObject extends Type implements \Iterator, \Countable {
 	*	Updates the keys to match the data we have stored.
 	*	@return void
 	*/
-	protected function updateKeys(){
+	protected function updateKeys():void {
 		if(is_array($this->mixValue)){
 			$this->_arrKeys = array_keys($this->mixValue);
 		}else{
@@ -189,7 +189,7 @@ class DictionaryObject extends Type implements \Iterator, \Countable {
 	*	@param string $strKey The name of the key to check.
 	*	@return boolean
 	*/
-	public function has($strKey){
+	public function has($strKey):bool {
 		return in_array($strKey, $this->_arrKeys);
 	}
 
@@ -207,7 +207,7 @@ class DictionaryObject extends Type implements \Iterator, \Countable {
 	*	Rewind method for the Iterator Interface.
 	*	@return void
 	*/
-	function rewind(){
+	function rewind():void {
 		$this->_numPosition = 0;
 	}
 
@@ -217,7 +217,7 @@ class DictionaryObject extends Type implements \Iterator, \Countable {
 	*	Current method for the Iterator Interface.
 	*	@return mixed
 	*/
-	function current(){
+	function current():mixed {
 		return $this->get($this->_arrKeys[$this->_numPosition]);
 	}
 
@@ -227,7 +227,7 @@ class DictionaryObject extends Type implements \Iterator, \Countable {
 	*	Key method for the Iterator Interface.
 	*	@return
 	*/
-	function key(){
+	function key():mixed {
 		return $this->_arrKeys[$this->_numPosition];
 	}
 
@@ -237,7 +237,7 @@ class DictionaryObject extends Type implements \Iterator, \Countable {
 	*	Next method for the Iterator Interface.
 	*	@return void
 	*/
-	function next(){
+	function next():void {
 		++$this->_numPosition;
 	}
 
@@ -247,7 +247,7 @@ class DictionaryObject extends Type implements \Iterator, \Countable {
 	*	Valid method for the Iterator Interface.
 	*	@return boolean
 	*/
-	function valid(){
+	function valid():bool {
 		return isset($this->_arrKeys[$this->_numPosition]);
 	}
 
@@ -257,7 +257,7 @@ class DictionaryObject extends Type implements \Iterator, \Countable {
 	*	Method for the \JsonSerializable Interface.
 	*	@return mixed
 	*/
-	public function jsonSerialize(){
+	public function jsonSerialize():mixed {
 		$arrData = array();
 		$this->updateKeys();
 
@@ -275,7 +275,7 @@ class DictionaryObject extends Type implements \Iterator, \Countable {
 	*	Count method for the \Countable Interface.
 	*	@return int
 	*/
-	public function count(){
+	public function count():int {
 		return count($this->mixValue);
 	}
 }

@@ -40,7 +40,7 @@ class ArrayObject extends Type implements \Iterator, \ArrayAccess, \Countable {
 	*	Called after the object is created by the TypeFactory to finish any setup required.
 	*	@return void
 	*/
-	public function setup(){
+	public function setup():void {
 		if($this->hasOption('default')){
 			$this->setValue($this->options()->default);
 		}
@@ -53,7 +53,7 @@ class ArrayObject extends Type implements \Iterator, \ArrayAccess, \Countable {
 	*	@param mixed $mixValue The value to check.
 	*	@return bool
 	*/
-	public function isValid($mixValue){
+	public function isValid($mixValue):bool {
 		if(is_null($mixValue)){
 			return true;
 		}
@@ -72,7 +72,7 @@ class ArrayObject extends Type implements \Iterator, \ArrayAccess, \Countable {
 	*	@param mixed $mixValue The value to check.
 	*	@return bool
 	*/
-	public function isValidItem($mixValue){
+	public function isValidItem($mixValue):bool {
 		if($this->hasOption('max')){
 			if(count($this->mixValue)>=$this->options()->max){
 				throw new MaxException($this->options()->max);
@@ -91,7 +91,7 @@ class ArrayObject extends Type implements \Iterator, \ArrayAccess, \Countable {
 	*	@throws TypeException if valud is not valid.
 	*	@return bool
 	*/
-	public function setValue($mixValue){
+	public function setValue($mixValue):bool {
 		if($this->isValid($mixValue)){
 			$this->mixValue = array();
 
@@ -114,7 +114,7 @@ class ArrayObject extends Type implements \Iterator, \ArrayAccess, \Countable {
 	*	Rewind method for the Iterator Interface.
 	*	@return void
 	*/
-	function rewind(){
+	function rewind():void {
 		$this->_numPosition = 0;
 	}
 
@@ -124,7 +124,7 @@ class ArrayObject extends Type implements \Iterator, \ArrayAccess, \Countable {
 	*	Current method for the Iterator Interface.
 	*	@return mixed
 	*/
-	function current(){
+	function current():mixed {
 		return $this->mixValue[$this->_numPosition];
 	}
 
@@ -134,7 +134,7 @@ class ArrayObject extends Type implements \Iterator, \ArrayAccess, \Countable {
 	*	Key method for the Iterator Interface.
 	*	@return
 	*/
-	function key(){
+	function key():mixed {
 		return $this->_numPosition;
 	}
 
@@ -144,7 +144,7 @@ class ArrayObject extends Type implements \Iterator, \ArrayAccess, \Countable {
 	*	Next method for the Iterator Interface.
 	*	@return void
 	*/
-	function next(){
+	function next():void {
 		++$this->_numPosition;
 	}
 
@@ -154,7 +154,7 @@ class ArrayObject extends Type implements \Iterator, \ArrayAccess, \Countable {
 	*	Valid method for the Iterator Interface.
 	*	@return boolean
 	*/
-	function valid(){
+	function valid():bool {
 		return isset($this->mixValue[$this->_numPosition]);
 	}
 
@@ -166,7 +166,7 @@ class ArrayObject extends Type implements \Iterator, \ArrayAccess, \Countable {
 	*	@param mixed $mixValue The value to set.
 	*	@return void
 	*/
-	public function offsetSet($mixOffset, $mixValue){
+	public function offsetSet($mixOffset, $mixValue):void {
 		if($this->isValidItem($mixValue)){
 			if(is_null($mixOffset)){
 				$this->mixValue[] = $mixValue;
@@ -183,7 +183,7 @@ class ArrayObject extends Type implements \Iterator, \ArrayAccess, \Countable {
 	*	@param mixed $mixOffset The array offset/key.
 	*	@return boolean
 	*/
-	public function offsetExists($mixOffset){
+	public function offsetExists($mixOffset):bool {
 		return isset($this->mixValue[$mixOffset]);
 	}
 
@@ -194,7 +194,7 @@ class ArrayObject extends Type implements \Iterator, \ArrayAccess, \Countable {
 	*	@param mixed $mixOffset The array offset/key.
 	*	@return void
 	*/
-	public function offsetUnset($mixOffset){
+	public function offsetUnset($mixOffset):void {
 		unset($this->mixValue[$mixOffset]);
 	}
 
@@ -205,7 +205,7 @@ class ArrayObject extends Type implements \Iterator, \ArrayAccess, \Countable {
 	*	@param mixed $mixOffset The array offset/key.
 	*	@return boolean
 	*/
-	public function offsetGet($mixOffset){
+	public function offsetGet($mixOffset):bool {
 		return isset($this->mixValue[$mixOffset]) ? $this->mixValue[$mixOffset] : null;
 	}
 
@@ -215,7 +215,7 @@ class ArrayObject extends Type implements \Iterator, \ArrayAccess, \Countable {
 	*	Method for the \JsonSerializable Interface.
 	*	@return mixed
 	*/
-	public function jsonSerialize(){
+	public function jsonSerialize():mixed {
 		return count($this->mixValue) ? $this->mixValue : null;
 	}
 
@@ -225,7 +225,7 @@ class ArrayObject extends Type implements \Iterator, \ArrayAccess, \Countable {
 	*	Count method for the \Countable Interface.
 	*	@return int
 	*/
-	public function count(){
+	public function count():int {
 		return count($this->mixValue);
 	}
 }

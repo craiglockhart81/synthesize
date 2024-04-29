@@ -220,7 +220,7 @@ class Synthesize implements \Iterator, \JsonSerializable {
 	*	Rewind method for the Iterator Interface.
 	*	@return void
 	*/
-	function rewind(){
+	function rewind():void {
 		$this->_numPosition = 0;
 	}
 
@@ -230,7 +230,7 @@ class Synthesize implements \Iterator, \JsonSerializable {
 	*	Current method for the Iterator Interface.
 	*	@return mixed
 	*/
-	function current(){
+	function current():mixed {
 		return $this->_arrData[$this->_arrProperties[$this->_numPosition]];
 	}
 
@@ -240,7 +240,7 @@ class Synthesize implements \Iterator, \JsonSerializable {
 	*	Key method for the Iterator Interface.
 	*	@return
 	*/
-	function key(){
+	function key():mixed {
 		return $this->_arrProperties[$this->_numPosition];
 	}
 
@@ -250,7 +250,7 @@ class Synthesize implements \Iterator, \JsonSerializable {
 	*	Next method for the Iterator Interface.
 	*	@return void
 	*/
-	function next(){
+	function next():void {
 		++$this->_numPosition;
 	}
 
@@ -260,7 +260,7 @@ class Synthesize implements \Iterator, \JsonSerializable {
 	*	Valid method for the Iterator Interface.
 	*	@return boolean
 	*/
-	function valid(){
+	function valid():bool {
 		return isset($this->_arrProperties[$this->_numPosition]);
 	}
 
@@ -270,7 +270,7 @@ class Synthesize implements \Iterator, \JsonSerializable {
 	*	Called by json_* methods so we can control what items are returned.
 	*	@return mixed
 	*/
-	public function jsonSerialize(){
+	public function jsonSerialize():mixed {
 		$arrData = array();
 
 		foreach($this as $strKey => $objValue){

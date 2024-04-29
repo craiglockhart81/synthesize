@@ -30,7 +30,7 @@ class IntObject extends Type {
 	*	@param mixed $mixValue The value to check.
 	*	@return bool
 	*/
-	public function isValid($mixValue){
+	public function isValid($mixValue):bool {
 		if(is_int($mixValue)){
 			if($this->hasOption('min')){
 				if($mixValue<$this->options()->min){

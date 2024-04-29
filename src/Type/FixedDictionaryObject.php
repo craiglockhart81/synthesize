@@ -49,7 +49,7 @@ abstract class FixedDictionaryObject extends DictionaryObject {
 	*	@param array $arrDictionary The array of values for the dictionary.
 	*	@return void
 	*/
-	public function replace(Array $arrDictionary){
+	public function replace(Array $arrDictionary):void{
 		$this->setValue(array());
 
 		foreach($this->arrKeys as $strKey){
@@ -71,7 +71,7 @@ abstract class FixedDictionaryObject extends DictionaryObject {
 	*	@param mixed $mixValue The value to set.
 	*	@return void
 	*/
-	public function set($strKey, $mixValue){
+	public function set($strKey, $mixValue):void{
 		if($this->has($strKey)){
 			$this->getValue()[$strKey] = $mixValue;
 			$this->updateKeys();

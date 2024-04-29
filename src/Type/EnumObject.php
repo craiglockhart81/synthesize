@@ -29,7 +29,7 @@ class EnumObject extends Type {
 	*	Called after the object is created by the TypeFactory to finish any setup required.
 	*	@return void
 	*/
-	public function setup(){
+	public function setup():void {
 		if($this->hasOption('class') && $this->options()->class){
 			if(($this->hasOption('autoinit') && $this->options()->autoinit) && $this->hasOption('default')){
 				$this->setValue($this->options()->default);
@@ -45,7 +45,7 @@ class EnumObject extends Type {
 	*	Returns the value of the object.
 	*	@return mixed
 	*/
-	public function asValue(){
+	public function asValue():mixed {
 		if(is_null($this->mixValue)){
 			return null;
 		}
@@ -61,7 +61,7 @@ class EnumObject extends Type {
 	*	@throws TypeException if valud is not valid.
 	*	@return bool
 	*/
-	public function setValue($mixValue){
+	public function setValue($mixValue):bool {
 		if(is_null($mixValue)){
 			$this->mixValue = null;
 			return true;
@@ -69,6 +69,7 @@ class EnumObject extends Type {
 
 		$strClass = $this->options()->class;
 		$this->mixValue = new $strClass($mixValue);
+		return false;
 	}
 
 	/**
@@ -77,7 +78,7 @@ class EnumObject extends Type {
 	*	Method for the \JsonSerializable Interface.
 	*	@return mixed
 	*/
-	public function jsonSerialize(){
+	public function jsonSerialize():mixed {
 		return $this->asValue();
 	}
 }

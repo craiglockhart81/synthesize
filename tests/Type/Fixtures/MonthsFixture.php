@@ -25,7 +25,7 @@ class MonthsFixture extends Enum implements \JsonSerializable {
 	*	Method for the \JsonSerializable Interface.
 	*	@return mixed
 	*/
-	public function jsonSerialize(){
+	public function jsonSerialize():mixed {
 		return $this->getValue();
 	}
 }

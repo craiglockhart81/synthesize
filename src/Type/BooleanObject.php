@@ -29,7 +29,7 @@ class BooleanObject extends Type {
 	*	@param mixed $mixValue The value to check.
 	*	@return bool
 	*/
-	public function isValid($mixValue){
+	public function isValid($mixValue):bool {
 		if(is_bool($mixValue)){
 			return true;
 		}

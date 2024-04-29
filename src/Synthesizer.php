@@ -115,7 +115,7 @@ trait Synthesizer {
 	*	Returns the string form of the data type.
 	*	@return string
 	*/
-	public function __toString(){
+	public function __toString():string {
 		return json_encode($this->jsonSerialize());
 	}
 
@@ -186,7 +186,7 @@ trait Synthesizer {
 	*	Called by json_* methods so we can control what items are returned.
 	*	@return mixed
 	*/
-	public function jsonSerialize(){
+	public function jsonSerialize():mixed {
 		return $this->getSynthesize()->jsonSerialize();
 	}
 }

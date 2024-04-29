@@ -30,7 +30,7 @@ class ObjectObject extends Type {
 	*	Called after the object is created by the TypeFactory to finish any setup required.
 	*	@return void
 	*/
-	public function setup(){
+	public function setup():void {
 		if(($this->hasOption('autoinit') && $this->options()->autoinit) && ($this->hasOption('class') || $this->hasOption('default'))){
 			$strClass = $this->hasOption('class') ? $this->options()->class : $this->options()->default;
 			$this->setValue(new $strClass);
@@ -45,7 +45,7 @@ class ObjectObject extends Type {
 	*	@throws TypeException if valud is not valid.
 	*	@return bool
 	*/
-	public function setValue($mixValue){
+	public function setValue($mixValue):bool {
 		if(!$this->isValid($mixValue)){
 			if($this->hasOption('class')){
 				$strClass = $this->options()->class;
@@ -58,7 +58,7 @@ class ObjectObject extends Type {
 			}
 		}
 
-		parent::setValue($mixValue);
+		return parent::setValue($mixValue);
 	}
 
 	/**
@@ -68,7 +68,7 @@ class ObjectObject extends Type {
 	*	@param mixed $mixValue The value to check.
 	*	@return bool
 	*/
-	public function isValid($mixValue){
+	public function isValid($mixValue):bool {
 		if(is_null($mixValue)){
 			return true;
 		}
@@ -95,7 +95,7 @@ class ObjectObject extends Type {
 	*	Method for the \JsonSerializable Interface.
 	*	@return mixed
 	*/
-	public function jsonSerialize(){
+	public function jsonSerialize():mixed {
 		if(is_object($this->mixValue)){
 			$mixJSON = json_encode($this->mixValue);
 			if((!is_null($this->mixValue) && $mixJSON!='[]') || ($this->hasOption('jsonnull') && $this->options()->jsonnull)){

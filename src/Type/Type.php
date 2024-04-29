@@ -39,7 +39,7 @@ class Type implements TypesInterface, \JsonSerializable {
 	*	Returns the string form of the data type.
 	*	@return string
 	*/
-	public function __toString(){
+	public function __toString():string {
 		return $this->jsonSerialize();
 	}
 
@@ -66,7 +66,7 @@ class Type implements TypesInterface, \JsonSerializable {
 	*	Called after the object is created by the TypeFactory to finish any setup required.
 	*	@return void
 	*/
-	public function setup(){
+	public function setup():void {
 		if($this->hasOption('default', true)){
 			$this->setValue($this->options()->default);
 		}
@@ -78,7 +78,7 @@ class Type implements TypesInterface, \JsonSerializable {
 	*	Returns the value of the object.
 	*	@return mixed
 	*/
-	public function asValue(){
+	public function asValue():mixed {
 		return $this->mixValue;
 	}
 
@@ -98,7 +98,7 @@ class Type implements TypesInterface, \JsonSerializable {
 	*	@param \Frozensheep\Synthesize\Type\SynthesizeOption $objOption The options about what data object is required.
 	*	@return void
 	*/
-	public function setOptions(SynthesizeOption $objOptions){
+	public function setOptions(SynthesizeOption $objOptions):void {
 		$this->_objOptions = $objOptions;
 	}
 
@@ -119,7 +119,7 @@ class Type implements TypesInterface, \JsonSerializable {
 	*	@param $strOption The option.
 	*	@return boolean
 	*/
-	public function hasOption($strOption, $boolAllowNull = false){
+	public function hasOption($strOption, $boolAllowNull = false):bool {
 		if($this->options()){
 			if($boolAllowNull || !is_null($this->options()->{$strOption})){
 				return true;
@@ -137,7 +137,7 @@ class Type implements TypesInterface, \JsonSerializable {
 	*	@throws TypeException if valud is not valid.
 	*	@return bool
 	*/
-	public function setValue($mixValue){
+	public function setValue($mixValue):bool {
 		if($this->isValid($mixValue) || is_null($mixValue)){
 			$this->mixValue = $mixValue;
 			return true;
@@ -153,7 +153,7 @@ class Type implements TypesInterface, \JsonSerializable {
 	*	@param mixed $mixValue The value to check.
 	*	@return bool
 	*/
-	public function isValid($mixValue){
+	public function isValid($mixValue):bool {
 		return true;
 	}
 
@@ -163,7 +163,7 @@ class Type implements TypesInterface, \JsonSerializable {
 	*	Method for the \JsonSerializable Interface.
 	*	@return mixed
 	*/
-	public function jsonSerialize(){
+	public function jsonSerialize():mixed {
 		return $this->asValue();
 	}
 }

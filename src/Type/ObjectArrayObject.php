@@ -32,7 +32,7 @@ class ObjectArrayObject extends ArrayObject {
 	*	Overwrite the ArrayObject method as we dont allow defaults for this type.
 	*	@return void
 	*/
-	public function setup(){
+	public function setup():void {
 
 	}
 
@@ -43,7 +43,7 @@ class ObjectArrayObject extends ArrayObject {
 	*	@param mixed $mixValue The value to check.
 	*	@return bool
 	*/
-	public function isValidItem($mixValue){
+	public function isValidItem($mixValue):bool {
 		if(is_object($mixValue)){
 			if($this->hasOption('max')){
 				if(count($this->mixValue)>=$this->options()->max){
@@ -72,7 +72,7 @@ class ObjectArrayObject extends ArrayObject {
 	*	@param mixed $mixValue The value to set.
 	*	@return void
 	*/
-	public function offsetSet($mixOffset, $mixValue){
+	public function offsetSet($mixOffset, $mixValue):void {
 		if(!$this->isValidItem($mixValue)){
 			$mixValue = $this->_create($mixValue);
 		}
@@ -87,7 +87,7 @@ class ObjectArrayObject extends ArrayObject {
 	*	@param mixed $mixValue Optional value to pass to the contruction of the object.
 	*	@return void
 	*/
-	private function _create($mixValue = null){
+	private function _create($mixValue = null) {
 		if($this->hasOption('class')){
 			$strClass = $this->options()->class;
 
